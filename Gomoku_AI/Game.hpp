@@ -12,9 +12,15 @@
 #include <stdio.h>
 #include <iostream>
 
+enum PlayerType {
+    Human,
+    AI
+};
+
 class Game {
 public:
     Game();
+    Game(PlayerType pt1, PlayerType pt2);
     ~Game();
     void HostMove();
     bool isEnded();
@@ -22,7 +28,8 @@ public:
 private:
     class Board* mBoard;
     class Judge* mJudge;
-    
+    class Player* mPlayer1;
+    class Player* mPlayer2;
 };
 
 std::ostream& operator << (std::ostream& out, const Game& g);

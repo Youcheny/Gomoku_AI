@@ -11,6 +11,9 @@
 		1B60B67A21D502C40008C204 /* Board.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B60B67821D502C40008C204 /* Board.cpp */; };
 		1B60B67D21D5D5D20008C204 /* Judge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B60B67B21D5D5D20008C204 /* Judge.cpp */; };
 		1B60B68021D5E16F0008C204 /* Game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B60B67E21D5E16F0008C204 /* Game.cpp */; };
+		1B60B68321D608BF0008C204 /* Player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B60B68121D608BF0008C204 /* Player.cpp */; };
+		1B60B68621D60E3A0008C204 /* HumanPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B60B68421D60E3A0008C204 /* HumanPlayer.cpp */; };
+		1B60B68921D610640008C204 /* AIPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1B60B68721D610640008C204 /* AIPlayer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +37,12 @@
 		1B60B67C21D5D5D20008C204 /* Judge.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Judge.hpp; sourceTree = "<group>"; };
 		1B60B67E21D5E16F0008C204 /* Game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Game.cpp; sourceTree = "<group>"; };
 		1B60B67F21D5E16F0008C204 /* Game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Game.hpp; sourceTree = "<group>"; };
+		1B60B68121D608BF0008C204 /* Player.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Player.cpp; sourceTree = "<group>"; };
+		1B60B68221D608BF0008C204 /* Player.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Player.hpp; sourceTree = "<group>"; };
+		1B60B68421D60E3A0008C204 /* HumanPlayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HumanPlayer.cpp; sourceTree = "<group>"; };
+		1B60B68521D60E3A0008C204 /* HumanPlayer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HumanPlayer.hpp; sourceTree = "<group>"; };
+		1B60B68721D610640008C204 /* AIPlayer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AIPlayer.cpp; sourceTree = "<group>"; };
+		1B60B68821D610640008C204 /* AIPlayer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AIPlayer.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +82,12 @@
 				1B60B67C21D5D5D20008C204 /* Judge.hpp */,
 				1B60B67E21D5E16F0008C204 /* Game.cpp */,
 				1B60B67F21D5E16F0008C204 /* Game.hpp */,
+				1B60B68121D608BF0008C204 /* Player.cpp */,
+				1B60B68221D608BF0008C204 /* Player.hpp */,
+				1B60B68421D60E3A0008C204 /* HumanPlayer.cpp */,
+				1B60B68521D60E3A0008C204 /* HumanPlayer.hpp */,
+				1B60B68721D610640008C204 /* AIPlayer.cpp */,
+				1B60B68821D610640008C204 /* AIPlayer.hpp */,
 			);
 			path = Gomoku_AI;
 			sourceTree = "<group>";
@@ -133,10 +148,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B60B68621D60E3A0008C204 /* HumanPlayer.cpp in Sources */,
 				1B60B67A21D502C40008C204 /* Board.cpp in Sources */,
 				1B60B67D21D5D5D20008C204 /* Judge.cpp in Sources */,
 				1B60B67221D502530008C204 /* main.cpp in Sources */,
 				1B60B68021D5E16F0008C204 /* Game.cpp in Sources */,
+				1B60B68321D608BF0008C204 /* Player.cpp in Sources */,
+				1B60B68921D610640008C204 /* AIPlayer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

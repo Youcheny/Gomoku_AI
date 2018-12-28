@@ -9,6 +9,9 @@
 #include "Game.hpp"
 #include "Board.hpp"
 #include "Judge.hpp"
+#include "Player.hpp"
+#include "HumanPlayer.hpp"
+#include "AIPlayer.hpp"
 #include <string>
 #include <sstream>
 
@@ -17,23 +20,35 @@ Game::Game() {
     mJudge = new Judge(mBoard);
 }
 
+Game::Game(PlayerType pt1, PlayerType pt2): Game() {
+    switch (pt1) {
+        case Human:
+            mPlayer1 = new HumanPlayer(mJudge);
+            break;
+        case AI:
+            mPlayer1 = new AIPlayer(mJudge);
+            break;
+    }
+    switch (pt2) {
+        case Human:
+            mPlayer2 = new HumanPlayer(mJudge);
+            break;
+        case AI:
+            mPlayer2 = new AIPlayer(mJudge);
+            break;
+    }
+}
+
 Game::~Game() {
     delete mBoard;
     delete mJudge;
+    delete mPlayer1;
+    delete mPlayer2;
 }
 
 void Game::HostMove() {
-    std::cout << (*mJudge);
-    std::cout << "Make Move: ";
-    std::string line;
-    int move;
-    std::cin >> line;
-    move = std::atoi(line.c_str());
-    MoveResult result = mJudge->MakeMove(mJudge->GetTurn(), move);
-    if (result == BlackWins)
-        std::cout << "Black Wins" << std::endl;
-    else if (result == WhiteWins)
-        std::cout << "White Wins" << std::endl;
+    mPlayer1->MakeMove();
+    mPlayer2->MakeMove();
 }
 
 bool Game::isEnded() {

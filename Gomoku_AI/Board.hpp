@@ -24,7 +24,7 @@ public:
     Board();
     State Get(int r, int c) const;
     friend std::ostream& operator << (std::ostream& out, const Board& b);
-    friend Judge;
+    friend Judge; // only judge can change the board
 protected:
     std::vector<std::vector<State>> mState;
     

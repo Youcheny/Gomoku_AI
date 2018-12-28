@@ -11,7 +11,7 @@
 
 Board::Board() {
     // Initialize board state
-    std::vector<std::vector<State>> initTo(19, std::vector<State>(19, Unoccupied));
+    std::vector<std::vector<State>> initTo(15, std::vector<State>(15, Unoccupied));
     mState = initTo;
 }
 
@@ -21,8 +21,8 @@ State Board::Get(int r, int c) const {
 
 std::ostream& operator << (std::ostream& out, const Board& b) {
     out << "Board:" << std::endl;
-    for (int i=0; i<19; ++i) {
-        for (int j=0; j<19; ++j) {
+    for (int i=0; i<15; ++i) {
+        for (int j=0; j<15; ++j) {
             switch (b.mState[i][j]) {
                 case BlackOccupied:
                     out << 'B' << '\t';
@@ -31,7 +31,7 @@ std::ostream& operator << (std::ostream& out, const Board& b) {
                     out << 'W' << '\t';
                     break;
                 case Unoccupied:
-                    out << i * 19 + j + 1 << '\t';
+                    out << i * 15 + j + 1 << '\t';
                     break;
                 default:
                     out << "Err" << '\t';

@@ -30,8 +30,8 @@ class Judge {
 public:
     Judge(class Board* board);
     ~Judge();
-    MoveResult MakeMove(Turn t, int r, int c);
-    MoveResult MakeMove(Turn t, int move);
+    MoveResult JudgeMove(Turn t, int r, int c);
+    MoveResult JudgeMove(Turn t, int move);
     Turn GetTurn() {return mTurn;};
     friend std::ostream& operator << (std::ostream& out, const Judge& j);
 protected:

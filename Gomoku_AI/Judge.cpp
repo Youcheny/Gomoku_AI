@@ -19,8 +19,8 @@ Judge::~Judge() {
     
 }
 
-MoveResult Judge::MakeMove(Turn t, int r, int c) {
-    if (r < 0 || r > 19 || c < 0 || c > 19 || t != mTurn || mTurn == EndGame)
+MoveResult Judge::JudgeMove(Turn t, int r, int c) {
+    if (r < 0 || r > 15 || c < 0 || c > 15 || t != mTurn || mTurn == EndGame)
         return InvalidMove;
     if (mBoard->mState[r][c] == Unoccupied) {
         // change the board accordingly
@@ -40,9 +40,9 @@ MoveResult Judge::MakeMove(Turn t, int r, int c) {
     else return InvalidMove;
 }
 
-MoveResult Judge::MakeMove(Turn t, int move) {
+MoveResult Judge::JudgeMove(Turn t, int move) {
     --move;
-    return MakeMove(t, move / 19, move % 19);
+    return JudgeMove(t, move / 15, move % 15);
 }
 
 MoveResult Judge::JudgeWinner(int r, int c) {
@@ -65,7 +65,7 @@ MoveResult Judge::JudgeWinner(int r, int c) {
 
 int Judge::CountDepth(int r, int c, const std::pair<int, int>& dir) {
     int depth = 0;
-    while (r >= 0 && c >= 0 && r <= 19 && c <= 19) {
+    while (r >= 0 && c >= 0 && r <= 15 && c <= 15) {
         if (mTurn == BlackTurn) {
             if (mBoard->mState[r][c] == BlackOccupied)
                 ++depth;

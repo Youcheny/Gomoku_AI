@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Gomoku_AI/Judge.cpp"
-            timestampString = "567669123.291813"
+            timestampString = "567678357.83506"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
             endingLineNumber = "23"
-            landmarkName = "Judge::MakeMove(Turn t, int r, int c)"
+            landmarkName = "Judge::JudgeMove(Turn t, int r, int c)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
