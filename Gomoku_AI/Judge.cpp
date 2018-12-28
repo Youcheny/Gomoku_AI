@@ -65,7 +65,7 @@ MoveResult Judge::JudgeWinner(int r, int c) {
 
 int Judge::CountDepth(int r, int c, const std::pair<int, int>& dir) {
     int depth = 0;
-    while (r >= 0 && c >= 0 && r <= 15 && c <= 15) {
+    while (r >= 0 && c >= 0 && r <= 14 && c <= 14) {
         if (mTurn == BlackTurn) {
             if (mBoard->mState[r][c] == BlackOccupied)
                 ++depth;

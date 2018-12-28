@@ -47,14 +47,21 @@ Game::~Game() {
 }
 
 void Game::HostRound() {
+    PrintStatus();
     mPlayer1->MakeMove();
     if (isEnded()) return;
+    PrintStatus();
     mPlayer2->MakeMove();
 }
 
 bool Game::isEnded() {
     return mJudge->GetTurn() == EndGame;
 }
+
+void Game::PrintStatus() const {
+    std::cout << (*mJudge);
+}
+
 
 std::ostream& operator << (std::ostream& out, const Game& g) {
     out << (*(g.mJudge));

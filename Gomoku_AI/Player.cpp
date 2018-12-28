@@ -15,3 +15,4 @@ Player::Player(class Judge* judge, FactionType faction): mJudge(judge), mFaction
 Player::~Player() {
     
 }
+

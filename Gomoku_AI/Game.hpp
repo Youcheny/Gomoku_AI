@@ -26,6 +26,7 @@ public:
     bool isEnded();
     friend std::ostream& operator << (std::ostream& out, const Game& g);
 private:
+    void PrintStatus() const;
     class Board* mBoard;
     class Judge* mJudge;
     class Player* mPlayer1;

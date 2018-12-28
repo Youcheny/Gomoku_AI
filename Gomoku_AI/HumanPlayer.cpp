@@ -22,16 +22,7 @@ void HumanPlayer::MakeMove() {
         std::cout << "Move Invalid" << std::endl;
         return;
     }
-    std::cout << (*mJudge);
-    switch (mFaction) {
-        case Black:
-            std::cout << "Black";
-            break;
-        case White:
-            std::cout << "White";
-            break;
-    }
-    std::cout << " Make Move: ";
+    std::cout << "Make Move: ";
     std::string line;
     int move;
     std::cin >> line;
