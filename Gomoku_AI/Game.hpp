@@ -22,7 +22,7 @@ public:
     Game();
     Game(PlayerType pt1, PlayerType pt2);
     ~Game();
-    void HostMove();
+    void HostRound();
     bool isEnded();
     friend std::ostream& operator << (std::ostream& out, const Game& g);
 private:

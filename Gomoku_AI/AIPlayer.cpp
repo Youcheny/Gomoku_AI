@@ -8,7 +8,7 @@
 
 #include "AIPlayer.hpp"
 
-AIPlayer::AIPlayer(Judge* judge): Player(judge) {
+AIPlayer::AIPlayer(Judge* judge, FactionType faction): Player(judge, faction) {
     
 }
 

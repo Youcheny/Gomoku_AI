@@ -23,18 +23,18 @@ Game::Game() {
 Game::Game(PlayerType pt1, PlayerType pt2): Game() {
     switch (pt1) {
         case Human:
-            mPlayer1 = new HumanPlayer(mJudge);
+            mPlayer1 = new HumanPlayer(mJudge, Black);
             break;
         case AI:
-            mPlayer1 = new AIPlayer(mJudge);
+            mPlayer1 = new AIPlayer(mJudge, Black);
             break;
     }
     switch (pt2) {
         case Human:
-            mPlayer2 = new HumanPlayer(mJudge);
+            mPlayer2 = new HumanPlayer(mJudge, White);
             break;
         case AI:
-            mPlayer2 = new AIPlayer(mJudge);
+            mPlayer2 = new AIPlayer(mJudge, White);
             break;
     }
 }
@@ -46,8 +46,9 @@ Game::~Game() {
     delete mPlayer2;
 }
 
-void Game::HostMove() {
+void Game::HostRound() {
     mPlayer1->MakeMove();
+    if (isEnded()) return;
     mPlayer2->MakeMove();
 }
 

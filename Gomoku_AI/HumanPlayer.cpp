@@ -10,28 +10,28 @@
 #include "Judge.hpp"
 #include <iostream>
 
-HumanPlayer::HumanPlayer(Judge* judge): Player(judge) {
+HumanPlayer::HumanPlayer(Judge* judge, FactionType faction): Player(judge, faction) {
     
 }
 
 void HumanPlayer::MakeMove() {
     // Human Player prompts the user for move
-    std::cout << (*mJudge);
-    if (mJudge->GetTurn() == EndGame) {
-        std::cout << "Game Has Ended." << std::endl;
+    if ((mJudge->GetTurn() == EndGame)
+        || (mFaction == Black && mJudge->GetTurn() == WhiteTurn)
+        || (mFaction == White && mJudge->GetTurn() == BlackTurn)) {
+        std::cout << "Move Invalid" << std::endl;
         return;
     }
-    switch (mJudge->GetTurn()) {
-        case BlackTurn:
-            std::cout << "Black ";
+    std::cout << (*mJudge);
+    switch (mFaction) {
+        case Black:
+            std::cout << "Black";
             break;
-        case WhiteTurn:
-            std::cout << "White ";
-            break;
-        default:
+        case White:
+            std::cout << "White";
             break;
     }
-    std::cout << "Make Move: ";
+    std::cout << " Make Move: ";
     std::string line;
     int move;
     std::cin >> line;

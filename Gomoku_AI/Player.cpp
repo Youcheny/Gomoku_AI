@@ -8,7 +8,7 @@
 
 #include "Player.hpp"
 
-Player::Player(class Judge* judge): mJudge(judge) {
+Player::Player(class Judge* judge, FactionType faction): mJudge(judge), mFaction(faction) {
     
 }
 

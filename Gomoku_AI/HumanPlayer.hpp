@@ -14,7 +14,7 @@
 
 class HumanPlayer : public Player {
 public:
-    HumanPlayer(class Judge* judge);
+    HumanPlayer(class Judge* judge, FactionType faction);
     void MakeMove() override;
 };
 

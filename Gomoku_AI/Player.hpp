@@ -11,13 +11,19 @@
 
 #include <stdio.h>
 
+enum FactionType {
+    Black,
+    White
+};
+
 class Player {
 public:
-    Player(class Judge* judge);
+    Player(class Judge* judge, FactionType faction);
     virtual ~Player();
     virtual void MakeMove() = 0;
 protected:
     class Judge* mJudge;
+    FactionType mFaction;
 };
 
 #endif /* Player_hpp */

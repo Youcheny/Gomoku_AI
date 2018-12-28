@@ -14,7 +14,7 @@
 
 class AIPlayer : public Player {
 public:
-    AIPlayer(class Judge* judge);
+    AIPlayer(class Judge* judge, FactionType faction);
     void MakeMove() override;
 };
 

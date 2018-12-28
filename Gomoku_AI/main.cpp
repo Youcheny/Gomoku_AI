@@ -15,7 +15,7 @@ int main(int argc, const char * argv[]) {
     // insert code here...
     Game game(Human, Human);
     while (!game.isEnded()) {
-        game.HostMove();
+        game.HostRound();
     }
     std::cout << "Thanks for playing!" << std::endl;
     return 0;
